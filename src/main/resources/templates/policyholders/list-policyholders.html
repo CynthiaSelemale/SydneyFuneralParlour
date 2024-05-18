@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sydney Funeral Parlour Admin Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Admin Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto"></ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="window.location.reload();">Refresh</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"th:href="@{policyholders/login}">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <h3>Policy Holders</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Policy Number</th>
+                    <th>ID Number</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Title</th>
+                    <th>Gender</th>
+                    <th>Nationality</th>
+                    <th>Street</th>
+                    <th>City</th>
+                    <th>Province</th>
+                    <th>Postal Code</th>
+                    <th>Cell Phone Number</th>
+                    <th>Work Telephone Number</th>
+                    <th>Home Telephone Number</th>
+                    <th>Email</th>
+                    <th>Plan Number</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="IndividualPlanPolicyHolder : ${IndividualPlanPolicyHolders}">
+                    <td th:text="${IndividualPlanPolicyHolder.policyNumber}"></td>
+                    <td th:text="${IndividualPlanPolicyHolder.idNumber}"></td>
+                    <td th:text="${IndividualPlanPolicyHolder.firstName}"></td>
+                    <td th:text="${IndividualPlanPolicyHolder.lastName}"></td>
+                    <td th:text="${IndividualPlanPolicyHolder.title}"></td>
+                    <td th:text="${IndividualPlanPolicyHolder.gender}"></td>
+                    <td th:text="${IndividualPlanPolicyHolder.nationality}"></td>
+                    <td th:text="${IndividualPlanPolicyHolder.street}"></td>
+                    <td th:text="${IndividualPlanPolicyHolder.city}"></td>
+                    <td th:text="${IndividualPlanPolicyHolder.province}"></td>
+                    <td th:text="${IndividualPlanPolicyHolder.postalCode}"></td>
+                    <td th:text="${IndividualPlanPolicyHolder.cellphone}"></td>
+                    <td th:text="${IndividualPlanPolicyHolder.worktelePhone}"></td>
+                    <td th:text="${IndividualPlanPolicyHolder.hometelePhone}"></td>
+                    <td th:text="${IndividualPlanPolicyHolder.email}"></td>
+                    <td th:text="${IndividualPlanPolicyHolder.planNumber}"></td>
+                    <td><a th:href="@{/policyholders/edit/{id}(id=${IndividualPlanPolicyHolder.policyNumber})}" class="btn btn-primary btn-sm">Edit</a></td>
+                    <td><a th:href="@{/policyholders/delete/{id}(id=${IndividualPlanPolicyHolder.policyNumber})}" class="btn btn-danger btn-sm"
+						th:onclick="'return confirm(\'Are you sure you want to delete this plan?\');'">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Beneficiaries</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Id Number</th>
+                    <th>Gender</th>
+                    <th>Relationship</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="IndividualPlanPolicyBeneficiary : ${IndidualPlanPolicyBeneficiaries}">
+                    <td th:text="${IndividualPlanPolicyBeneficiary.firstName}"></td>
+                    <td th:text="${IndividualPlanPolicyBeneficiary.secondName}"></td>
+                    <td th:text="${IndividualPlanPolicyBeneficiary.idNumber}"></td>
+                    <td th:text="${IndividualPlanPolicyBeneficiary.gender}"></td>
+                    <td th:text="${IndividualPlanPolicyBeneficiary.relationship}"></td>
+					<td>
+                    <td><a th:href="@{/#}" class="btn btn-danger btn-sm" th:onclick="'return confirm(\'Are you sure you want to delete this beneficiary?\');'">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a href="/add_policy_plan" class="btn btn-primary btn-sm">Add Policy Plan</a>
+    <div class="table-responsive">
+        <h3>Policy Plans</h3>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Policy Id</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="Plan : ${Plans}">
+                    <td th:text="${Plan.id}"></td>
+                    <td th:text="${Plan.descrpition}"></td>
+                    <td th:text="${Plan.price}"></td>
+                    <td><a th:href="@{/plans/edit/{id}(id=${Plan.id})}" class="btn btn-primary btn-sm">Edit</a></td>
+					<td><a th:href="@{/plans/delete/{id}(id=${Plan.id})}" class="btn btn-danger btn-sm" 
+					       th:onclick="'return confirm(\'Are you sure you want to delete this plan?\');'">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+ 
+</body>
+</html>

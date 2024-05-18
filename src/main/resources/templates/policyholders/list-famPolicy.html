@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Policy Holders</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Policy Holders</h2>
+        <a href="/policyholders/add" class="btn btn-primary">Add Policy Holder</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Policy Number</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+					<!--<th>Beneficiary</th>-->
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="policyHolder : ${policyHolders}">
+                    <td th:text="${policyHolder.policyNumber}">Policy Number</td>
+                    <td th:text="${policyHolder.firstName}">First Name</td>
+                    <td th:text="${policyHolder.lastName}">Last Name</td>
+					<!--<td>
+						<tr>
+							<tdth:text="${policyHolder.policyNumber}"></tdth:text="${policyHolder.policyNumber}">
+						</tr>
+					</td>-->
+                    <td>
+                        <a th:href="@{/policyholders/edit/{id}(id=${policyHolder.policyNumber})}" class="btn btn-warning">Edit</a>
+                        <a th:href="@{/policyholders/delete/{id}(id=${policyHolder.policyNumber})}" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

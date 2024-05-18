@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+	<title>Sydney's Funeral Parlour</title>
+	<meta content="" name="description" />
+	<meta content="" name="keywords" />
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+		rel="stylesheet" />
+
+	<!-- Vendor CSS Files -->
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+	<link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+	<link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+	<!-- Template Main CSS File -->
+	<link href="assets/css/main.css" rel="stylesheet" />
+
+	<!-- =======================================================
+  * Template Name: UpConstruction
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+	<header id="header" class="header d-flex align-items-center">
+		<div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+			<a href="index.html" class="logo d-flex align-items-center">
+				<!-- Uncomment the line below if you also wish to use an image logo -->
+				<!-- <img src="assets/img/logo.png" alt=""> -->
+				<h1>Sydney's Funeral Parlour<span>.</span></h1>
+			</a>
+
+			<i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+			<i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+			<nav id="navbar" class="navbar">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li class="dropdown">
+						<a href="#"><span class="active">Funeral plans</span><i
+								class="bi bi-chevron-down dropdown-indicator"></i></a>
+						<ul>
+							<li><a href="individualPlan.html">Individual plan</a></li>
+							<li><a href="familyPlan.html">Family plan</a></li>
+							<li>
+								<a href="groupOrSchemePlan.html">Others</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="login.html">LogIn</a></li>
+				</ul>
+			</nav>
+			<!-- .navbar -->
+		</div>
+	</header>
+	<!-- End Header -->
+
+	<main id="main">
+		<!-- ======= Breadcrumbs ======= -->
+		<div class="breadcrumbs d-flex align-items-center" style="
+          background-image: url('sydneysPictures/SyndeyÔÇÖs/candleImage2.jpg');
+        ">
+			<div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+				<h2>Individual plan</h2>
+				<ol>
+					<li><a href="index.html">Home</a></li>
+					<li>Individual plan</li>
+				</ol>
+			</div>
+		</div>
+		<!-- End Breadcrumbs -->
+
+		<!-- ======= Individual plan Section ======= -->
+		<section id="individual-plan" class="individual-plan">
+			<div class="container" data-aos="fade-up">
+				<div class="section-title text-center">
+					<h2>Individual Plan</h2>
+					<p>
+						Fill out the form below to sign up for our individual funeral
+						plan.
+					</p>
+				</div>
+				<div class="row justify-content-center">
+					<!-- Center the row -->
+					<div class="col-lg-8">
+						<form action="/policyholders/add" method="post" role="form" class="php-email-form">
+							<div class="row">
+								<!-- Personal Details -->
+								<div class="col-md-6 form-group">
+									<label for="policy_number">Policy Number</label>
+									<input type="text" name="policy_number" class="form-control" id="policy_number"
+										placeholder="Policy Number" readonly />  <!-- Add this to hold Police number temporary-->
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="policy_number">Plan Number</label>
+									<input type="text" name="plan_number" class="form-control" id="policy_number"
+										placeholder="I3" readonly /> <!-- Add this to hold plan number temporary-->
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="id_number">ID Number</label>
+									<input type="text" name="id_number" class="form-control" id="id_number"
+										placeholder="ID Number" required />
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="first_name">First Name</label>
+									<input type="text" name="first_name" class="form-control" id="first_name"
+										placeholder="First Name" required />
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="last_name">Last Name (Surname)</label>
+									<input type="text" name="last_name" class="form-control" id="last_name"
+										placeholder="Last Name (Surname)" required />
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="title">Title</label>
+									<select name="title" id="title" class="form-control" required>
+										<option value="">Select Title</option>
+										<option value="Mr">Mr</option>
+										<option value="Mrs">Mrs</option>
+										<option value="Ms">Ms</option>
+									</select>
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="gender">Gender</label>
+									<select name="gender" id="gender" class="form-control" required>
+										<option value="">Select Gender</option>
+										<option value="Male">Male</option>
+										<option value="Female">Female</option>
+									</select>
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="nationality">Nationality</label>
+									<input type="text" name="nationality" class="form-control" id="nationality"
+										placeholder="Nationality" required />
+								</div>
+
+								<!-- Centered Address and Contact labels -->
+								<div class="col-md-12 text-center">
+									<h3>Address</h3>
+								</div>
+								<!-- Address -->
+								<div class="col-md-6 form-group">
+									<label for="street">Street</label>
+									<input type="text" name="street" class="form-control" id="street"
+										placeholder="Street" required />
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="city">City</label>
+									<input type="text" name="city" class="form-control" id="city" placeholder="City"
+										required />
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="province">Province</label>
+									<input type="text" name="province" class="form-control" id="province"
+										placeholder="Province" required />
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="postal_code">Postal Code</label>
+									<input type="text" name="postal_code" class="form-control" id="postal_code"
+										placeholder="Postal Code" required />
+								</div>
+
+								<!-- Contact -->
+								<div class="col-md-12 text-center">
+									<h3>Contact</h3>
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="cellphone">Cellphone</label>
+									<input type="text" name="cellphone" class="form-control" id="cellphone"
+										placeholder="Cellphone" required />
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="work_telephone">Work Telephone Number</label>
+									<input type="text" name="work_telephone" class="form-control" id="work_telephone"
+										placeholder="Work Telephone Number" />
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="home_telephone">Home Telephone Number</label>
+									<input type="text" name="home_telephone" class="form-control" id="home_telephone"
+										placeholder="Home Telephone Number" />
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="email">Email</label>
+									<input type="email" name="email" class="form-control" id="email" placeholder="Email"
+										required />
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="password">Password</label>
+									<input type="password" name="password" class="form-control" id="password"
+										placeholder="Password" required />
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="confirm_password">Confirm Password</label>
+									<input type="password" name="confirm_password" class="form-control"
+										id="confirm_password" placeholder="Confirm Password" required />
+								</div>
+
+								Beneficiary Details
+								<div class="col-md-12 text-center">
+									<h3>Beneficiary Details</h3>
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="beneficiary_first_name">First Name</label>
+									<input type="text" name="beneficiary_first_name" class="form-control"
+										id="beneficiary_first_name" placeholder="Beneficiary's First Name" required />
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="beneficiary_second_name">Second Name</label>
+									<input type="text" name="beneficiary_second_name" class="form-control"
+										id="beneficiary_second_name" placeholder="Beneficiary's Second Name" required />
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="beneficiary_id_number">ID Number</label>
+									<input type="text" name="beneficiary_id_number" class="form-control"
+										id="beneficiary_id_number" placeholder="Beneficiary's ID Number" required />
+
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="beneficiary_gender">Gender</label>
+									<select name="beneficiary_gender" id="beneficiary_gender" class="form-control"
+										required>
+										<option value="">Select Gender</option>
+										<option value="Male">Male</option>
+										<option value="Female">Female</option>
+									</select>
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="beneficiary_relationship">Relationship</label>
+									<select name="beneficiary_relationship" id="beneficiary_relationship"
+										class="form-control" required>
+										<option value="">Select Relationship</option>
+										<option value="Spouse">Spouse</option>
+										<option value="Child">Child</option>
+										<option value="Parent">Parent</option>
+										<option value="Sibling">Sibling</option>
+										<option value="Other relative">Other relative</option>
+										<option value="Friend">Friend</option>
+									</select>
+								</div>
+
+								<div class="col-md-12 my-3">
+									<div class="error-message"></div>
+								</div>
+								<div class="col-md-12 text-center">
+									<button type="submit" class="btn btn-primary">
+										Submit
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- End Individual plan Section -->
+	</main>
+	<!-- End #main -->
+
+	<!-- ======= Footer ======= -->
+	<footer id="footer" class="footer">
+		<div class="footer-content position-relative">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-6">
+						<div class="footer-info">
+							<h3>Sydney's Funeral Parlour.</h3>
+							<p>
+								1888 Unit X <br />
+								Mabopane 0190<br /><br />
+								<strong>Phone:</strong> 072 411 1910 / 012 702 901<br />
+								<strong>Fax:</strong> 086 650 9297<br />
+								<strong>Email:</strong> sydney.m@mweb.co.za<br />
+							</p>
+							<div class="social-links d-flex mt-3">
+								<a href="#" class="d-flex align-items-center justify-content-center"><i
+										class="bi bi-twitter"></i></a>
+								<a href="#" class="d-flex align-items-center justify-content-center"><i
+										class="bi bi-facebook"></i></a>
+								<a href="#" class="d-flex align-items-center justify-content-center"><i
+										class="bi bi-instagram"></i></a>
+								<a href="#" class="d-flex align-items-center justify-content-center"><i
+										class="bi bi-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+					<!-- End footer info column-->
+
+					<div class="col-lg-2 col-md-3 footer-links">
+						<h4>Useful Links</h4>
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Funeral plans</a></li>
+							<li><a href="#">Terms of service</a></li>
+							<li><a href="#">Privacy policy</a></li>
+						</ul>
+					</div>
+					<!-- End footer links column-->
+
+					<div class="col-lg-2 col-md-3 footer-links">
+						<h4>Our Services</h4>
+						<ul>
+							<li><a href="#">Web Design</a></li>
+							<li><a href="#">Web Development</a></li>
+							<li><a href="#">Product Management</a></li>
+							<li><a href="#">Marketing</a></li>
+							<li><a href="#">Graphic Design</a></li>
+						</ul>
+					</div>
+					<!-- End footer links column-->
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+
+	<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+			class="bi bi-arrow-up-short"></i></a>
+
+	<div id="preloader"></div>
+
+	<!-- Vendor JS Files -->
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/aos/aos.js"></script>
+	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+	<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+	<script src="assets/vendor/php-email-form/validate.js"></script>
+
+	<!-- Template Main JS File -->
+	<script src="assets/js/main.js"></script>
+	<script>
+		document.getElementById('id_number').addEventListener('input', function () {
+			var idNumber = this.value;
+			var policyNumberField = document.getElementById('policy_number');
+			policyNumberField.value = 'I' + idNumber;
+		});
+	</script>
+</body>
+
+</html>

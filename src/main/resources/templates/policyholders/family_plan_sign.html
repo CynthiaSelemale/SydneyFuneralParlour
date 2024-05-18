@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Policy Holder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Add Policy Holder</h2>
+        <form action="#" th:action="@{/policyholders/addFamily}"  method="post" role="form" class="php-email-form">
+            <div class="row">
+                <!-- Personal Details -->
+                <div class="col-md-6 form-group">
+                    <label for="policy_number">Policy Number</label>
+                    <input type="text" name="policyNumber" class="form-control" id="policy_number" placeholder="Policy Number" readonly th:value="${policyHolder.policyNumber}" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="plan_number">Plan Number</label>
+                    <input type="text" name="planNumber" class="form-control" id="plan_number" placeholder="Plan Number" 
+					value="I3" readonly th:value="${policyHolder.planNumber}" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="id_number">ID Number</label>
+                    <input type="text" name="idNumber" class="form-control" id="id_number" placeholder="ID Number" required th:value="${policyHolder.idNumber}" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" name="firstName" class="form-control" id="first_name" placeholder="First Name" required th:value="${policyHolder.firstName}" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="last_name">Last Name (Surname)</label>
+                    <input type="text" name="lastName" class="form-control" id="last_name" placeholder="Last Name (Surname)" required th:value="${policyHolder.lastName}" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="title">Title</label>
+                    <select name="title" id="title" class="form-control" required th:value="${policyHolder.title}">
+                        <option value="">Select Title</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Ms">Ms</option>
+                    </select>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender" class="form-control" required th:value="${policyHolder.gender}">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="nationality">Nationality</label>
+                    <input type="text" name="nationality" class="form-control" id="nationality" placeholder="Nationality" required th:value="${policyHolder.nationality}" />
+                </div>
+
+                <!-- Centered Address and Contact labels -->
+                <div class="col-md-12 text-center">
+                    <h3>Address</h3>
+                </div>
+                <!-- Address -->
+                <div class="col-md-6 form-group">
+                    <label for="street">Street</label>
+                    <input type="text" name="street" class="form-control" id="street" placeholder="Street" required th:value="${policyHolder.street}" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="city">City</label>
+                    <input type="text" name="city" class="form-control" id="city" placeholder="City" required th:value="${policyHolder.city}" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="province">Province</label>
+                    <input type="text" name="province" class="form-control" id="province" placeholder="Province" required th:value="${policyHolder.province}" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="postal_code">Postal Code</label>
+                    <input type="text" name="postalCode" class="form-control" id="postal_code" placeholder="Postal Code" required th:value="${policyHolder.postalCode}" />
+                </div>
+
+                <!-- Contact -->
+                <div class="col-md-12 text-center">
+                    <h3>Contact</h3>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="cellphone">Cellphone</label>
+                    <input type="text" name="cellphone" class="form-control" id="cellphone" placeholder="Cellphone" required th:value="${policyHolder.cellphone}" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="work_telephone">Work Telephone Number</label>
+                    <input type="text" name="worktelePhone" class="form-control" id="work_telephone" placeholder="Work Telephone Number" th:value="${policyHolder.worktelePhone}" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="home_telephone">Home Telephone Number</label>
+                    <input type="text" name="hometelePhone" class="form-control" id="home_telephone" placeholder="Home Telephone Number" th:value="${policyHolder.hometelePhone}" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" required th:value="${policyHolder.email}" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Password" required th:value="${policyHolder.password}" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" name="confirm_password" class="form-control" id="confirm_password" placeholder="Confirm Password" required />
+                </div>
+
+                <!-- Beneficiary Details 
+                <div class="col-md-12 text-center">
+                    <h3>Beneficiary Details</h3>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="beneficiary_first_name">First Name</label>
+                    <input type="text" name="beneficiary.firstName" class="form-control" id="beneficiary_first_name" placeholder="Beneficiary's First Name" required th:value="${beneficiary.firstName}" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="beneficiary_second_name">Second Name</label>
+                    <input type="text" name="beneficiary.secondName" class="form-control" id="beneficiary_second_name" placeholder="Beneficiary's Second Name" required th:value="${beneficiary.secondName}" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="beneficiary_id_number">ID Number</label>
+                    <input type="text" name="beneficiary.idNumber" class="form-control" id="beneficiary_id_number" placeholder="Beneficiary's ID Number" required th:value="${beneficiary.idNumber}" />
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="beneficiary_gender">Gender</label>
+                    <select name="beneficiary.gender" id="beneficiary_gender" class="form-control" required th:value="${beneficiary.gender}">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+             <div class="col-md-6 form-group">
+                    <label for="beneficiary_relationship">Relationship</label>
+                    <select name="beneficiary.relationship" id="beneficiary_relationship" class="form-control" required th:value="${beneficiary.relationship}">
+                        <option value="">Select Relationship</option>
+                        <option value="Spouse">Spouse</option>
+                        <option value="Child">Child</option>
+                        <option value="Parent">Parent</option>
+                        <option value="Sibling">Sibling</option>
+                        <option value="Other relative">Other relative</option>
+                        <option value="Friend">Friend</option>
+                    </select>
+                </div>
+				
+                <div class="col-md-12 my-3">
+                    <div class="error-message"></div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+	<script>
+		document.getElementById('id_number').addEventListener('input', function () {
+			var idNumber = this.value;
+			var policyNumberField = document.getElementById('policy_number');
+			policyNumberField.value = 'F' + idNumber;
+		});
+	</script>
+	<script>
+	    document.addEventListener('DOMContentLoaded', function () {
+	        const urlParams = new URLSearchParams(window.location.search);
+	        const plan = urlParams.get('plan');
+	        
+	        if (plan) {
+	            const lastTwoDigits = plan.slice(-2);
+	            // Assuming you want to pass these digits to a form field
+	            document.getElementById('plan-id').value = lastTwoDigits;
+	        }
+	    });
+	</script>
+</body>
+</html>

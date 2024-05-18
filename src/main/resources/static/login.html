@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Sydney's Funeral Advisors And Services</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        height: 100%;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      /* Text Align */
+      .text-c {
+        text-align: center;
+      }
+      .text-l {
+        text-align: left;
+      }
+      .text-r {
+        text-align: right;
+      }
+      .text-j {
+        text-align: justify;
+      }
+
+      /* Text Color */
+      .text-whitesmoke {
+        color: whitesmoke;
+      }
+      .text-darkyellow {
+        color: #ff0909;
+      }
+
+      /* Lines */
+
+      .line-b {
+        border-bottom: 1px solid #ff0909 !important;
+      }
+
+      /* Buttons */
+      .button {
+        border-radius: 3px;
+      }
+      .form-button {
+        background-color: rgba(253, 11, 3, 0.24);
+        border-color: rgba(253, 11, 3, 0.24);
+        color: #e6e6e6;
+      }
+      .form-button:hover,
+      .form-button:focus,
+      .form-button:active,
+      .form-button.active,
+      .form-button:active:focus,
+      .form-button:active:hover,
+      .form-button.active:hover,
+      .form-button.active:focus {
+        background-color: #ff0909;
+        border-color: #ff0909;
+        color: #e6e6e6;
+      }
+      .button-l {
+        width: 100% !important;
+      }
+
+      /* Margins g(global) - l(left) - r(right) - t(top) - b(bottom) */
+
+      .margin-g {
+        margin: 15px;
+      }
+      .margin-g-sm {
+        margin: 10px;
+      }
+      .margin-g-md {
+        margin: 20px;
+      }
+      .margin-g-lg {
+        margin: 30px;
+      }
+
+      .margin-l {
+        margin-left: 15px;
+      }
+      .margin-l-sm {
+        margin-left: 10px;
+      }
+      .margin-l-md {
+        margin-left: 20px;
+      }
+      .margin-l-lg {
+        margin-left: 30px;
+      }
+
+      .margin-r {
+        margin-right: 15px;
+      }
+      .margin-r-sm {
+        margin-right: 10px;
+      }
+      .margin-r-md {
+        margin-right: 20px;
+      }
+      .margin-r-lg {
+        margin-right: 30px;
+      }
+
+      .margin-t {
+        margin-top: 15px;
+      }
+      .margin-t-sm {
+        margin-top: 10px;
+      }
+      .margin-t-md {
+        margin-top: 20px;
+      }
+      .margin-t-lg {
+        margin-top: 30px;
+      }
+
+      .margin-b {
+        margin-bottom: 15px;
+      }
+      .margin-b-sm {
+        margin-bottom: 10px;
+      }
+      .margin-b-md {
+        margin-bottom: 20px;
+      }
+      .margin-b-lg {
+        margin-bottom: 30px;
+      }
+
+      /* Bootstrap Form Control Extension */
+
+      .form-control,
+      .border-line {
+        background-color: #5f5f5f;
+        background-image: none;
+        border: 1px solid #424242;
+        border-radius: 1px;
+        color: inherit;
+        display: block;
+        padding: 6px 12px;
+        transition: border-color 0.15s ease-in-out 0s,
+          box-shadow 0.15s ease-in-out 0s;
+        width: 100%;
+      }
+      .form-control:focus,
+      .border-line:focus {
+        border-color: #ff0909;
+        background-color: #616161;
+        color: #e6e6e6;
+      }
+      .form-control,
+      .form-control:focus {
+        box-shadow: none;
+      }
+      .form-control::-webkit-input-placeholder {
+        color: #bdbdbd;
+      }
+
+      /* Container */
+
+      .container-content {
+        background-color: #3a3a3aa2;
+        color: inherit;
+        padding: 15px 20px 20px 20px;
+        border-color: #ff0909;
+        border-image: none;
+        border-style: solid solid none;
+        border-width: 1px 0;
+      }
+
+      /* Backgrounds */
+
+      .main-bg {
+        background: linear-gradient(#424242, #ffffff);
+      }
+
+      /* Login & Register Pages*/
+
+      .login-container {
+        max-width: 400px;
+        z-index: 100;
+        margin: 0 auto;
+        background: url("sydneysPictures/SyndeyÔÇÖs/candleImage2.jpg");
+      }
+      .login.login-container {
+        width: 300px;
+      }
+      .wrapper.login-container {
+        margin-top: 140px;
+      }
+      .logo-badge {
+        color: #e6e6e6;
+        font-size: 80px;
+        font-weight: 800;
+        letter-spacing: -10px;
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="header" class="header d-flex align-items-center">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1>Sydney's Funeral Advisors And Services<span></span></h1>
+        </a>
+
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#"
+                ><span>Funeral plans</span>
+                <i class="bi bi-chevron-down dropdown-indicator"></i
+              ></a>
+              <ul>
+                <li><a href="individualPlan.html">Individual plan</a></li>
+                <li><a href="familyPlan.html">Family plan</a></li>
+                <li>
+                  <a href="groupOrSchemePlan.html">Others</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html" class="active">LogIn</a></li>
+          </ul>
+        </nav>
+        <!-- .navbar -->
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <main id="main">
+      <!-- ======= Login/SignUp form  plan Section ======= -->
+      <section id="about" class="about"></section>
+      <!--Add the Login/ SignUp form here-->
+      <body class="main-bg">
+        <div class="login-container text-c animated flipInX">
+          <div>
+            <h1 class="logo-badge text-whitesmoke">
+              <span class="fa fa-user-circle"></span>
+            </h1>
+          </div>
+          <h3 class="text-whitesmoke">
+            Sydney's Funeral Advisors And Services Member
+          </h3>
+          <p class="text-whitesmoke">Login</p>
+          <div class="container-content">
+            <form class="margin-t" action="" method="post">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Username"
+                  required=""
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="*****"
+                  required=""
+                />
+              </div>
+              <button type="submit" class="form-button button-l margin-b">
+                Login
+              </button>
+
+              <a class="text-darkyellow" href="#"
+                ><small>Forgot your password?</small></a
+              >
+              <p class="text-whitesmoke text-center">
+                <small>Do not have an account?</small>
+              </p>
+              <a class="text-darkyellow" href="SignUp.html"
+                ><small>Sign Up</small></a
+              >
+            </form>
+          </div>
+        </div>
+      </body>
+      <!-- End Login/SignUp form plan Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+      <div class="footer-content position-relative">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="footer-info">
+                <h3>Sydney's Funeral Advisors And Services.</h3>
+                <p>
+                  1888 Unit X <br />
+                  Mabopane 0190<br /><br />
+                  <strong>Phone:</strong> 072 411 1910 / 012 702 901<br />
+                  <strong>Fax:</strong> 086 650 9297<br />
+                  <strong>Email:</strong> sydney.m@mweb.co.za<br />
+                </p>
+                <div class="social-links d-flex mt-3">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-center"
+                    ><i class="bi bi-twitter"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-center"
+                    ><i class="bi bi-facebook"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-center"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-center"
+                    ><i class="bi bi-linkedin"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End footer info column-->
+
+            <div class="col-lg-2 col-md-3 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Funeral plans</a></li>
+                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+            <!-- End footer links column-->
+
+            <div class="col-lg-2 col-md-3 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Product Management</a></li>
+                <li><a href="#">Marketing</a></li>
+                <li><a href="#">Graphic Design</a></li>
+              </ul>
+            </div>
+            <!-- End footer links column-->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a
+      href="#"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
